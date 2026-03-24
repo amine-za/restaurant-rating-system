@@ -1,11 +1,13 @@
 """Restaurant Rating System — OOP assessment project."""
 
+from src.customer import Customer
 from src.exceptions import (
     DuplicateRatingError,
     InvalidEmailError,
     InvalidRatingError,
     ValidationError,
 )
+from src.rating import Rating
 from src.restaurant import MenuItem, Restaurant
 from src.validation import (
     validate_email,
@@ -16,12 +18,17 @@ from src.validation import (
 )
 
 __all__ = [
+    # Exceptions
     "ValidationError",
     "InvalidRatingError",
     "DuplicateRatingError",
     "InvalidEmailError",
+    # Domain models
     "Restaurant",
     "MenuItem",
+    "Customer",
+    "Rating",
+    # Validation
     "validate_non_empty_string",
     "validate_email",
     "validate_rating_score",
