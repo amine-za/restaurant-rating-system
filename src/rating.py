@@ -33,10 +33,13 @@ class Rating:
         """Return a readable string representation of the rating."""
         customer_name = self.customer.name
         restaurant_name = self.restaurant.name
-        return (
+        result = (
             f"{customer_name} rated {restaurant_name} "
             f"{self.score}/5 on {self.timestamp.strftime('%Y-%m-%d %H:%M')}"
         )
+        if self.review_text:
+            result += f": {self.review_text}"
+        return result
 
     def __repr__(self) -> str:
         """Return a detailed string representation for debugging."""
