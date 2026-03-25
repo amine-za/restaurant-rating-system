@@ -8,6 +8,7 @@ from src.exceptions import (
     ValidationError,
 )
 from src.rating import Rating
+from src.recommendation import RecommendationEngine
 from src.restaurant import MenuItem, Restaurant
 from src.validation import (
     validate_email,
@@ -28,6 +29,8 @@ __all__ = [
     "MenuItem",
     "Customer",
     "Rating",
+    # Engine
+    "RecommendationEngine",
     # Validation
     "validate_non_empty_string",
     "validate_email",
